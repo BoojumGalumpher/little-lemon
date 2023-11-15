@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <!-- Meta tags for SEO -->
+    <meta name="title" content="Little Lemon">
+    <meta name="description" content="Based in Chicago, Illinois, Little Lemon is a family-owned Mediterranean restaurant, focused on traditional recipes served with a modern twist. The chefs draw inspiration from Italian, Greek, and Turkish culture and have a menu of 12 to 15 items that they rotate seasonally. The restaurant has a rustic and relaxed atmosphere with moderate prices, making it a popular place for a meal any time of the day.">
+    <meta name="author" content="Roberto Rodriguez">
+    <meta name="language" content="english">
+    <!-- Open Graph Protocol - For sharing the site on social media-->
+    <meta property="og:title" content="About">
+    <meta property="og:description" content="Based in Chicago, Illinois, Little Lemon is a family-owned Mediterranean restaurant, focused on traditional recipes served with a modern twist. The chefs draw inspiration from Italian, Greek, and Turkish culture and have a menu of 12 to 15 items that they rotate seasonally. The restaurant has a rustic and relaxed atmosphere with moderate prices, making it a popular place for a meal any time of the day.">
+    <meta property="og:image" content="img/little-lemon-yellow.png">
+    <meta property="og:image:alt" content="The Little Lemon logo: a yellow lemon with two green leaves">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content=""><!-- Show GitHub link here-->
+    <!-- For showing an icon on the browser tab-->
+    <link rel="icon" type="image/png" href="img/lemon-yellow.png">
+    <link rel="apple-touch-icon" href="img/lemon-yellow.png">
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Markazi+Text&display=swap" rel="stylesheet"> 
+    <!-- Local styles-->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="grid-container">
+        <header>
+            <img src="img/little-lemon-yellow.png" alt="The Little Lemon logo: a yellow lemon with two green leaves, followed by the words Little Lemon" height="150">
+        </header>
+    
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="book.html">Book</a></li>
+                <li><a href="about.html" class="current-page">About</a></li>
+            </ul>
+        </nav>
+    
+        <main>
+            <div class="about-header">
+                <h1>About Us</h1>
+            </div>
+            <section class="google-map"> <!-- Restricted camera, microphone, and payment-->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d47498.39250691695!2d-87.69266271364614!3d41.921892236387684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd31bb9a2181f%3A0x19e7354e990f3992!2sLincoln%20Park%2C%20Chicago%2C%20IL!5e0!3m2!1sen!2sus!4v1699929387693!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allow="camera 'none'; microphone 'none'; payment 'none'" sandbox="allow-same-origin allow-scripts allow-forms allow-popups allow-popups-to-escape-sandbox allow-presentation"></iframe>
+            </section>
+
+            <section class="two-chefs">
+                <article class="about-article">
+                    <div class="flex-container">
+                        <div>
+                            <figure>
+                                <img class="img-chefs" src="img/two-chefs.jpg" alt="Mario and Adrian, the owners of Little Lemon, are singing outdoors next to a crowded pavilion, while wearing their chef's uniforms. Adrian, on the left, is holding a whisk in his right hand, and a strainer and shaker in his right had. Mario, on the right, is playing the ukelele.">
+                                <figcaption class="fig-chefs">Adrian &#38; Mario</figcaption>
+                            </figure>
+                            <p>Based in Chicago, Illinois, Little Lemon is a family-owned Mediterranean restaurant, focused on traditional recipes served with a modern twist. The chefs draw inspiration from Italian, Greek, and Turkish culture and have a menu of 12–15 items that they rotate seasonally. The restaurant has a rustic and relaxed atmosphere with moderate prices, making it a popular place for a meal any time of the day.</p>
+                        </div>
+                        <div class>
+                            <figure>
+                                <img src="img/outdoor-tables.jpg" alt="Tables on a sunlit courtyard in the shade of a green-leafed tree and a purple-flowered one.">
+                                <figcaption class="fig-chicago">Our Chicago Location</figcaption>
+                            </figure>
+                            <p>Little Lemon is owned by two Italian brothers, Mario and Adrian, who moved to the United States to pursue their shared dream of owning a restaurant. To craft the menu, Mario relies on family recipes and his experience as a chef in Italy. Adrian does all the marketing for the restaurant and led the effort to expand the menu beyond classic Italian to incorporate additional cuisines from the Mediterranean region.</p>
+                        </div>
+                        
+                    </div>
+                </article>
+            </section>
+            <section>
+                <div class="google-maps">
+                </div>
+            </section>
+        </main>
+    
+        <footer>
+            <div>
+                <img src="img/lemon-frame-yellow.png" alt="The Little Lemon logo: a yellow lemon with two green leaves" height="75"> 
+            </div>
+            <div>
+                <p>&copy; <span id="year"></span> Little Lemon</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
