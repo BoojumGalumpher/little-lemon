@@ -1,0 +1,506 @@
+/* In this stylesheet, logical properties are used in lieu of physical properties:
+for example, inline-size substitutes width, and block-size substitutes height. */
+
+/* Color palette - Some of these colors were extracted from the Header img at brandfolder.com */
+:root {
+    --yellow: rgb(243, 205, 20);
+    --green: rgba(54, 100, 84, 0.75);
+    --greenHover: rgba(54, 100, 64, 1);
+    --white: rgb(254, 254, 254);
+    --textBlack: rgb(23, 23, 23);
+    --bannerYellow: rgba(250, 250, 7, 0.938);
+    --backgroundGrey: rgb(215, 218, 211);
+    --formRed: rgb(213, 92, 95);
+}
+
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* img reset */
+img {
+    display: block;
+    max-inline-size: 100%;
+}
+
+body {
+    background-color: var(--white);
+    font-family: "Markazi Text", serif; 
+    font-size: 1.3rem;
+    color: var(--textBlack);
+}
+
+p {
+    max-inline-size: 80ch;
+    margin-block-end: 0.5em;
+}
+
+.grid-container {
+    display: grid;
+    max-inline-size: 960px;
+    inline-size: 90%; /* To prevent the inline edges of the document from touching the viewport edges at smaller screen sizes.*/
+    margin: 1rem auto;
+
+    /* This layout configuration ensures the Footer is always near the bottom of 
+    the viewport, no matter how little the amount of content in Main. */
+    display: grid;
+    min-block-size: 100vh;
+    grid-template-rows: auto auto 1fr auto;
+}
+
+h1, h2 {
+    margin-block-end: 1rem;
+    text-align: center;
+    font-weight: 400; 
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+article {
+    margin-block-end: 2em;
+}
+
+.address-hours p:nth-child(1) {
+    margin-block-end: 1.5em;
+}
+
+.address-hours p:nth-last-child(-n+4) {
+    color: var(--formRed);
+}
+
+/*** NAVIGATION ***/
+nav {
+    margin-block-end: 2em;
+    background-color: var(--backgroundGrey);
+    padding: 0.3em;
+    border-radius: 12px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav a {
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: var(--green);
+}
+
+nav a:hover {
+    color: var(--greenHover);
+}
+
+nav a:active {
+    color: var(--yellow);
+} 
+
+.current-page {
+    border-block-end: solid 1px var(--green);
+}
+
+.current-page:hover {
+    color: var(--green); /* The nav link on the current page won't change color when hovered over.*/
+}
+
+.col-3 article a {
+    display: inline-block;
+    margin-block-start: 1rem;
+    color: var(--green);
+    font-size: 1.4rem;
+}
+
+.col-3 article a:hover {
+    color: var(--greenHover);
+}
+
+.col-3 article a:active {
+    color: var(--yellow);
+}
+
+/* Hero Navigation */
+.hero a {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--bannerYellow);
+    text-shadow: 1px 1px 1px rgb(23, 23, 23);
+    background: rgba(0, 0, 0, 0.4);
+    padding-block-end: 0.5em;
+    padding-block-start:0.5em;         /*Change for desktop*/
+    border-radius: 12px;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0 , 0, 0.24);
+    transition-property: box-shadow, transform;
+    transition-duration: 350ms;
+    transition-timing-function: ease;
+    font-size: 2rem;  /*Change for desktop*/
+    word-spacing: 100vw;    /*One word per line in mobile*/
+}
+
+.img-limone {
+    display: inline;
+    background: none;
+    border: none;
+    box-shadow: none;
+    position: relative;
+    inset-block-start: 30px;
+}
+
+.word-limone {
+    position: relative;   /*Change for desktop*/
+    inset-block-start: -14px;             
+}
+
+.word-al {
+    position: relative;   /*Change for desktop*/
+    inset-block-start: 6px;
+}
+
+.hero a:hover {
+    color: var(--white);
+    box-shadow: 0px 8px 10px 1px rgba(0, 0 , 0, 0.2);
+    transform: translateY(-8px);
+    
+}
+
+.hero a:active {
+    color: var(--bannerYellow);
+}
+/*** END OF NAVIGATION ***/
+
+header img {
+    margin: 0 auto 2em auto;
+}
+
+.hero {
+    background: var(--backgroundGrey); /* If the image below does not load, this background will prevent the text in hero p from being invisible.*/
+    background-image: url(../img/spaghetti-plate.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 3em 0.5em;
+    border-block-end: none;
+}
+
+.hero p {
+    text-align: center;
+    margin: 0 auto;
+    color: var(--white);
+    text-shadow: 1px 1px 1px rgb(23, 23, 23);
+}
+
+main img {
+    margin-block-end: 0.5em;
+    padding: 1px;
+    border: 1px solid rgb(2, 26, 64);
+    background-color: var(--green);
+    box-shadow: 0 -5px 3px -3px rgb(2, 26, 64), 0 5px 3px -3px rgb(2, 26, 64);
+}
+
+article {
+    border-block-end: 1px solid rgb(23, 23, 23); 
+    padding: 1em;
+}
+
+.col-3 article:last-child {
+    border-block-end: none;
+}
+
+
+footer img {
+    margin: 0 auto 1em auto;
+}
+
+footer p {
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* My layout is one-column for mobile, since, to me, it makes no sense
+to cram three columns in mobile devices, and uses the mobile-first approach.
+The following is the homepage layout for desktop:
+*/
+@media (min-width: 600px) {
+    .hero p {
+        font-size: 1.5rem;
+    }
+
+    .hero a {
+        font-size: 3rem; 
+        word-spacing: normal; 
+        padding-block-start: 0;
+    }
+
+    .word-al, .word-limone {
+        position: static;
+    }
+
+    /* Main layout*/
+    .home-section {
+        display: flex;
+        column-gap: 1em;
+    }
+
+    .home-article {
+        flex: 1;
+        background-color: var(--backgroundGrey);
+        border-radius: 12px;
+        border-block-end: none;
+    }
+
+    .col-3 article {
+        display: grid;
+        grid-template-rows: auto auto auto 1fr;
+    }
+
+    .col-3 article div {
+        align-self: end;
+    }
+
+    /* Footer layout */
+    footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+/* BOOK - FORM */
+.form-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-header, form {
+    background-color: var(--backgroundGrey);
+    border-radius: 12px;
+    width: 100%;
+    margin-block-end: 2rem;
+    padding: 2em;
+}
+
+.form-header {
+    background: var(--backgroundGrey); /* If the image below does not load, this background will prevent the text in hero p from being invisible.*/
+    background-image: url(../img/spaghetti-plate.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.form-header h1 {
+    color: var(--bannerYellow);
+    text-shadow: 1px 1px 1px rgb(23, 23, 23);
+    text-transform: uppercase;
+}
+
+.form-row {
+    margin-block-end: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"] {
+    background-color: var(--white);
+    border: 1px solid rgb(214, 217, 220);
+    border-radius: 6px;
+    width: 100%;
+    padding: 0.4rem;
+    font-size: 0.9rem;
+}
+
+input[type="text"]:invalid,
+input[type="email"]:invalid {
+    border: 1px solid var(--formRed); 
+    color: var(--formRed);
+    box-shadow: none;
+}
+
+output {
+    margin: 0 auto;
+}
+
+.form-row label {
+    margin-block-end: 0.5rem;
+}
+
+.form-row select {
+    padding: 0.4rem;
+    font-size: 0.9rem;
+}
+
+input[type="checkbox"] {
+    margin-block-end: 1rem;
+}
+
+.form-row button {
+    font-size: 1.6rem;
+    color: var(--green);
+    background-color: var(--yellow);
+    border: none;
+    border-radius: 12px;
+    padding: 0.5em;
+    cursor: pointer;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0 , 0, 0.24);
+    transition-property: box-shadow, transform;
+    transition-duration: 350ms;
+    transition-timing-function: ease;
+    font-family: "Markazi Text", serif;
+}
+
+.form-row button:hover {
+    color: var(--greenHover);
+    box-shadow: 0px 8px 10px 1px rgba(0, 0 , 0, 0.2);
+    transform: translateY(-8px);
+}
+
+.form-row button:active {
+    color: var(--white);
+}
+
+@media (min-width: 600px) {
+    .form-row {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+
+    input {
+        flex: 2;
+    }
+
+    label {
+        flex: 1;
+    }
+
+    .form-row button {
+        width: 33.33%;
+        margin: 0 auto;
+    }
+
+    /* To improve the range slider */
+    #range-wrapper {
+        display: grid;
+        grid-template-columns: auto 0.55fr auto;
+    }
+}
+
+/* ABOUT */
+.two-chefs p {
+    margin-block-end: 1em;
+}
+
+.about-header, .menu-header /*Recycling styles*/ {
+    background-color: var(--backgroundGrey);
+    border-radius: 12px;
+    width: 100%;
+    margin-block-end: 2rem;
+    padding: 2em;
+    background: var(--backgroundGrey); /* If the image below does not load, this background will prevent the text in hero p from being invisible.*/
+    background-image: url(../img/spaghetti-plate.jpg);
+    background-size: cover;
+    background-position: center;
+    color: var(--bannerYellow);
+    text-transform: uppercase;
+    text-shadow: 1px 1px 1px rgb(23, 23, 23);
+}
+
+.about-article figcaption {
+    color: var(--bannerYellow);
+    text-shadow: 1px 1px 1px rgb(23, 23, 23);
+    position: relative;
+    inset-block-end: 33px;
+    font-size: 1.4rem;
+}
+
+.about-article {
+    border-block-end: none;
+}
+
+/*Google Map*/
+.google-map {
+    padding-block-end: 33.33%;
+    position: relative;
+    margin-block-end: 1em;
+}
+
+.google-map iframe {
+    height: 100%;
+    width: 100%;
+    inset-inline-start: 0;
+    inset-block-start: 0;
+    position: absolute;
+    border-radius: 12px;
+}
+
+@media (min-width: 600px) {
+    .two-chefs .flex-container {
+        display: flex;
+        justify-content: space-between;
+        column-gap: 1em;
+    }
+
+    .about-article {
+        border-block-end: none;
+        background-color: var(--backgroundGrey);
+        border-radius: 12px;
+    }
+
+    .img-chefs {
+        margin-block-end: 0;
+    }
+
+    .about-article .fig-chefs {
+        inset-block-end: 5px;
+    }
+
+    .about-article .fig-chicago {
+        inset-block-end: 10px;
+    }
+
+    .google-map {
+        margin-block-end: 1.5em;
+    }
+}
+
+/* MENU */
+.menu-item {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    margin-block-end: 1em;
+    column-gap: 1em;
+}
+
+.menu-item p:nth-child(1) {
+    text-transform: uppercase;
+    color: var(--yellow);
+    font-size: 1.5rem;
+}
+
+.menu-item p:nth-child(2) {
+    color: var(--green);
+    font-size: 1.4rem;
+}
+
+.main-menu h2 {
+    margin-block-start: 1em;
+}
+
+.menu-last {
+    margin-block-end: 1em;
+}
+
+.sat-discount {
+    text-transform: none;
+    color: var(--green);
+}
